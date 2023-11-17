@@ -4,6 +4,8 @@
  */
 package com.mycompany.certamen_2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Estudiante
@@ -11,7 +13,7 @@ package com.mycompany.certamen_2;
 public class TextoPucv extends Libro{
     
     private String escuela;
-
+    private Scanner Entrada = new Scanner(System.in);
     //Constructor
     
     public TextoPucv(String escuela) {
@@ -37,6 +39,11 @@ public class TextoPucv extends Libro{
     }
     
     //Metodos
+    public void crearDatos(){
+        this.crearDatosLibro();
+        this.escuela = Entrada.nextLine();
+    }
+    
     public void leerDatos(){
         System.out.println("Titulo" + this.getTitulo());
         System.out.println("Autor" + this.getAutor());
