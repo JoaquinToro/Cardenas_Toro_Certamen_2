@@ -68,6 +68,8 @@ public class Novela extends Libro{
                 + " a determinar, historica, romantica, policiaca, realista"
                 + " ciencia ficcion, aventuras");
         this.tipo = this.tiposNovela[Integer.parseInt(Entrada.nextLine())];
+        
+        this.getListaLibros().add(this);
     }
     
     @Override
